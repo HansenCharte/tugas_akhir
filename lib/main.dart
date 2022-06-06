@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tugas_akhir/sign%20up.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
         cursorColor: Colors.white,
         cursorWidth: 2,
         obscureText: obscureText,
-        style: const TextStyle(color: Colors.white),
+        style: const TextStyle(color: Color.fromARGB(255, 27, 22, 22)),
         decoration: InputDecoration(
           border: InputBorder.none,
           filled: true,
@@ -149,7 +150,11 @@ class _LoginScreenState extends State<LoginScreen> {
               color: Color.fromARGB(255, 80, 69, 230),
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return SignUp();
+            }));
+          },
         ),
       ],
     );
